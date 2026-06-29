@@ -18,13 +18,13 @@ export function EmptyState({
   className,
 }: EmptyStateProps) {
   return (
-    <section className={cn('rounded-[2rem] border border-current/10 bg-current/[0.03] p-8 text-center', className)}>
-      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-current/10">
+    <section className={cn('border border-[var(--editable-border)] bg-white px-8 py-14 text-center shadow-[0_18px_50px_rgba(23,37,31,0.05)]', className)}>
+      <div className="mx-auto flex h-14 w-14 items-center justify-center bg-[var(--magazine-accent-soft)] text-[var(--magazine-accent-deep)]">
         <SearchX className="h-6 w-6" />
       </div>
-      <h2 className="mt-5 text-2xl font-semibold tracking-[-0.03em]">{title}</h2>
-      <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-current/65">{description}</p>
-      <Link href={actionHref} className="mt-6 inline-flex items-center gap-2 rounded-full border border-current/15 px-5 py-3 text-sm font-semibold transition hover:bg-current hover:text-background">
+      <h2 className="editable-display mt-5 text-4xl font-semibold tracking-[-0.03em] text-[var(--magazine-ink)]">{title}</h2>
+      <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-[var(--magazine-ink)]/65">{description}</p>
+      <Link href={actionHref} className="mt-6 inline-flex items-center gap-2 bg-[var(--magazine-accent-deep)] px-5 py-3 text-sm font-extrabold uppercase tracking-[0.14em] text-white transition hover:opacity-92">
         {actionLabel}
         <ArrowRight className="h-4 w-4" />
       </Link>
@@ -37,7 +37,7 @@ export function TaskEmptyState({ taskLabel = 'posts', className }: { taskLabel?:
     <EmptyState
       className={className}
       title={`No ${taskLabel} available yet`}
-      description={`Published ${taskLabel} from the master panel will appear here automatically. The page layout stays ready even when the feed is empty.`}
+      description={`Published ${taskLabel} from the main workspace will appear here automatically. The page layout stays ready even when the feed is empty.`}
       actionLabel="Explore the site"
       actionHref="/"
     />
