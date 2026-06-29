@@ -11,8 +11,7 @@ export const globalContent = {
     tagline: 'Independent reading platform',
     primaryLinks: [
       { label: 'Articles', href: '/articles' },
-      { label: 'Visuals', href: '/image-sharing' },
-      { label: 'Listings', href: '/listings' },
+      { label: 'Resources', href: '/search' },
       { label: 'Contact', href: '/contact' },
     ],
     actions: {
@@ -28,8 +27,7 @@ export const globalContent = {
         title: 'Explore',
         links: [
           { label: 'Articles', href: '/articles' },
-          { label: 'Listings', href: '/listings' },
-          { label: 'Images', href: '/image-sharing' },
+          { label: 'Resources', href: '/search' },
           { label: 'PDF Library', href: '/pdf' },
         ],
       },

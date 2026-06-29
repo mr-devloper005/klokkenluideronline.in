@@ -7,6 +7,7 @@ import { getPostTaskKey } from '@/lib/task-data'
 import { getMockPostsForTask } from '@/lib/mock-posts'
 import { SITE_CONFIG, type TaskKey } from '@/lib/site-config'
 import type { SitePost } from '@/lib/site-connector'
+import { Ads } from '@/lib/ads'
 import { EditableSiteShell } from '@/editable/shell/EditableSiteShell'
 import { pagesContent } from '@/editable/content/pages.content'
 
@@ -124,6 +125,10 @@ export default async function SearchPage({ searchParams }: { searchParams?: Prom
               <h2 className="mt-2 text-3xl font-black tracking-[-0.06em]">{query ? `Results for “${query}”` : pagesContent.search.resultsTitle}</h2>
             </div>
             <Link href="/article" className="inline-flex items-center gap-2 rounded-full border border-[var(--editable-border)] bg-white px-5 py-3 text-sm font-black">Browse latest <ArrowRight className="h-4 w-4" /></Link>
+          </div>
+
+          <div className="mx-auto mt-6 w-full max-w-[970px]">
+            <Ads slot="in-feed" size="billboard" showLabel className="mx-auto w-full" />
           </div>
 
           {results.length ? (
